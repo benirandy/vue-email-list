@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Email List</title>
+    </head>
+
+    <body>
+
+        <div id="app">
+            <h1>Email List</h1>
+            <button @click="generateEmails">Genera</button>
+            <ul v-if="emailsGenerated">
+                <li v-for="(email, index) in emailList" :key="index">{{ email }}</li>
+            </ul>
+            <p v-else>Nessun indirizzo email generato</p>
+
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+    </body>
+
+</html>
